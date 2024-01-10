@@ -1,0 +1,18 @@
+###
+post http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name" : "soso"
+}
+###
+DELETE  http://localhost:3000/api/products/2
+
+###
+patch http://localhost:3000/api/products/3
+Content-Type: application/json
+
+{
+    "name" : "zuzu",
+    "price": 2
+}
