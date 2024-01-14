@@ -15,12 +15,10 @@ app.get('/', async (req, res, next) => {
 app.use('/api', require('./routes/api.route'));
 
 app.use((req, res, next) => {
-  console.log("shemoylisdzid");
   next(createError.NotFound());
 });
 
 app.use((err, req, res, next) => {
-  console.log("gamoajva");
   res.status(err.status || 500);
   res.send({
     status: err.status || 500,
